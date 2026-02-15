@@ -1,0 +1,7 @@
+{
+  "name": "Lingua Hunter AI",
+  "description": "A Sci-Fi Scavenger Hunt Game for learning vocabulary using AI vision.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

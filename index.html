@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Lingua Hunter AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cyber: {
+                black: '#0b0c15',
+                dark: '#121420',
+                neonGreen: '#39ff14',
+                neonPink: '#ff00ff',
+                neonBlue: '#00ffff',
+                glass: 'rgba(255, 255, 255, 0.1)',
+              }
+            },
+            fontFamily: {
+              mono: ['Courier New', 'monospace'],
+              sans: ['Verdana', 'sans-serif'],
+            },
+            animation: {
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'spin-slow': 'spin 3s linear infinite',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0b0c15;
+        color: #ffffff;
+        font-family: 'Verdana', sans-serif;
+        overflow-x: hidden;
+      }
+      /* Custom Scrollbar for Cyberpunk feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0b0c15; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #39ff14; 
+        border-radius: 4px;
+      }
+      .cyber-glitch {
+        text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
+      }
+      .scan-line {
+        width: 100%;
+        height: 2px;
+        background: #39ff14;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: scan 2s linear infinite;
+        opacity: 0.7;
+        pointer-events: none;
+      }
+      @keyframes scan {
+        0% { top: 0%; }
+        100% { top: 100%; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
